@@ -33,3 +33,23 @@ function greetUser(user: User): string {
 }
 
 console.log(greetUser(testInstance));
+
+// Generics: Generics provide a variable to Type. This allows users to consume these types with their own types. It helps to create reusable components.
+
+let stringArray: Array<string> = ['A', 'B', 'C'];
+let numberArray: Array<number> = [1, 2, 3];
+
+// We can declare own type of generics
+interface Backpack<Type> {
+    add: (obj: Type) => void;
+    get: () => Type;
+}
+declare const bp: Backpack<string>;
+bp.add('my bag');
+console.log(bp.get()); // returns a string
+
+declare const newBackpack:Backpack<Array<string>>;
+newBackpack.add(['item1', 'item2']);
+console.log(newBackpack.get()); // returns an array of strings
+
+

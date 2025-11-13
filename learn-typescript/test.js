@@ -27,3 +27,10 @@ function greetUser(user) {
     return "Hello, ".concat(user.username, "!");
 }
 console.log(greetUser(testInstance));
+// Generics: Generics provide a variable to Type. This allows users to consume these types with their own types. It helps to create reusable components.
+var stringArray = ['A', 'B', 'C'];
+var numberArray = [1, 2, 3];
+bp.add('my bag');
+console.log(bp.get()); // returns a string
+newBackpack.add(['item1', 'item2']);
+console.log(newBackpack.get()); // returns an array of strings
